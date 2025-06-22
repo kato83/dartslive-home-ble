@@ -25,10 +25,11 @@ body {
   background: #4caf50;
   padding: 5px 10px;
   font-weight: bold;
+  font-size: 2rem;
 }
 
 .round {
-  font-size: 14px;
+  font-size: 2rem;
 }
 
 .score-estimate {
@@ -46,8 +47,8 @@ body {
   text-align: center;
   position: absolute;
   inset: 0;
-  width: 20rem;
-  height: 20rem;
+  width: 100%;
+  height: 1lh;
   margin: auto;
   font-weight: bold;
 }
