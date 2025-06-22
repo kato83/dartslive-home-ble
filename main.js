@@ -111,7 +111,7 @@ const connectToBLEDevice = async () => {
       const byteArray = new Uint8Array(value.buffer);
       const key = byteArray[2];
       const msg = dat.get(key);
-      scoreList.push(msg.number);
+      if (msg.number) scoreList.push(msg.number);
       document.querySelector('.main-score').textContent = scoreList.reduce((acc, current) => acc + current);
       document.querySelector('.player-score').textContent = scoreList.reduce((acc, current) => acc + current);
     });
