@@ -103,6 +103,7 @@ const connectToBLEDevice = async () => {
     const characteristic = await service.getCharacteristic(CHARACTERISTIC_UUID);
 
     isConnected = true;
+    document.querySelector('.disconnect').classList.remove('disconnect');
 
     // 通知を受け取る処理
     characteristic.addEventListener('characteristicvaluechanged', event => {
@@ -130,7 +131,8 @@ const connectToBLEDevice = async () => {
   }
 }
 
-document.addEventListener('click', async (e) => {
-  if (isConnected) return;
-  await connectToBLEDevice();
-});
+document.querySelector('.main-score')
+  .addEventListener('click', async (e) => {
+    if (isConnected) return;
+    await connectToBLEDevice();
+  });

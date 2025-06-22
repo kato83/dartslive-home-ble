@@ -60,6 +60,10 @@ body {
   margin-bottom: 10px;
 }
 
+.disconnect {
+  font-size: 4rem;
+}
+
 .bottom {
   position: absolute;
   bottom: 0;
